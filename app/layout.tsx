@@ -7,23 +7,23 @@ import { Header } from "@/components/header"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "FHA SOLUTIONS INC.",
+  title: "FHA Solutions Inc. — Utility Design Built for Today's Demands",
   description:
-    "We are a dedicated utility design and engineering firm. With extensive experience in both underground and aerial projects, we pride ourselves on delivering high-quality work efficiently and effectively.",
+    "Toronto-based utility design and engineering firm. Prime Designer for Rogers Communications across Ontario. End-to-end fibre, telecom, and joint-use design with PEng-stamped deliverables.",
   openGraph: {
-    title: "FHA SOLUTIONS INC.",
+    title: "FHA Solutions Inc. — Utility Design Built for Today's Demands",
     description:
-      "We are a dedicated utility design and engineering firm. With extensive experience in both underground and aerial projects, we pride ourselves on delivering high-quality work efficiently and effectively.",
+      "Toronto-based utility design and engineering firm. Prime Designer for Rogers Communications across Ontario. End-to-end fibre, telecom, and joint-use design with PEng-stamped deliverables.",
     url: "https://fhasolutions.ca",
-    siteName: "FHA SOLUTIONS INC.",
-    locale: "en_US",
+    siteName: "FHA Solutions Inc.",
+    locale: "en_CA",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "FHA SOLUTIONS INC.",
+    title: "FHA Solutions Inc. — Utility Design Built for Today's Demands",
     description:
-      "We are a dedicated utility design and engineering firm. With extensive experience in both underground and aerial projects, we pride ourselves on delivering high-quality work efficiently and effectively.",
+      "Toronto-based utility design and engineering firm. Prime Designer for Rogers Communications across Ontario.",
   },
   icons: {
     icon: [
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
     ],
   },
   manifest: "/manifest.json",
-    generator: 'v0.dev'
+  generator: "v0.dev",
 }
 
 export default function RootLayout({
@@ -56,18 +56,21 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="dark scroll-smooth">
-      <head>
-        <meta
-          name="description"
-          content="We are a dedicated utility design and engineering firm. With extensive experience in both underground and aerial projects, we pride ourselves on delivering high-quality work efficiently and effectively."
-        />
-      </head>
       <body className={`${inter.className} bg-[#010101] text-gray-100`}>
         <Header />
         {children}
-        <footer className="w-full py-6 px-4 bg-[#010101] text-gray-400">
-          <div className="container mx-auto text-center">
-            <p>&copy; 2025 FHA SOLUTIONS INC. All rights reserved.</p>
+        <footer className="w-full py-8 px-4 bg-[#010101] text-gray-400 border-t border-[#27272A]">
+          <div className="container mx-auto">
+            <div className="flex flex-col md:flex-row items-center justify-between gap-4 text-center md:text-left">
+              <div>
+                <p className="text-sm">&copy; {new Date().getFullYear()} FHA Solutions Inc. All rights reserved.</p>
+              </div>
+              <div className="flex flex-col md:flex-row gap-2 md:gap-6 text-xs uppercase tracking-wider">
+                <span>1200 Bay St., Unit 1201, Toronto</span>
+                <span>(647) 492-7193</span>
+                <span>general@fhasolutions.ca</span>
+              </div>
+            </div>
           </div>
         </footer>
       </body>
