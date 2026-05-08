@@ -86,7 +86,7 @@ export default function Home() {
       {/* About Us */}
       <section id="about-us" className="w-full py-12 md:py-24 bg-[#010101]">
         <div className="container mx-auto px-4">
-          <h2 className="mb-8 text-3xl font-bold text-center text-gray-100">ABOUT US</h2>
+          <h2 className="mb-8 text-2xl md:text-3xl font-bold text-center text-gray-100">ABOUT US</h2>
           <div className="max-w-3xl mx-auto text-center">
             <p className="text-lg text-gray-300 leading-relaxed">
               FHA Solutions Inc. is a Toronto-based utility design and engineering firm specializing in
@@ -102,7 +102,7 @@ export default function Home() {
       {/* Services */}
       <section id="services" className="w-full py-12 md:py-24 bg-[#010101]">
         <div className="container mx-auto px-4">
-          <h2 className="mb-12 text-3xl font-bold text-center text-gray-100">SERVICES</h2>
+          <h2 className="mb-12 text-2xl md:text-3xl font-bold text-center text-gray-100">SERVICES</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {services.map((service) => (
               <ServiceCard key={service.id} {...service} />
@@ -116,7 +116,7 @@ export default function Home() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <p className="text-xs uppercase tracking-widest text-[#FF9F0A] mb-2">6-Month Performance</p>
-            <h2 className="text-3xl font-bold text-gray-100">BY THE NUMBERS</h2>
+            <h2 className="text-2xl md:text-3xl font-bold text-gray-100">BY THE NUMBERS</h2>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-3 gap-px max-w-5xl mx-auto bg-[#27272A] border border-[#27272A]">
             {metrics.map((metric, idx) => (
@@ -155,13 +155,13 @@ export default function Home() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-10">
             <p className="text-xs uppercase tracking-widest text-[#FF9F0A] mb-2">Specialty Permit Experience</p>
-            <h2 className="text-3xl font-bold text-gray-100">SPECIALTY PERMITS</h2>
+            <h2 className="text-2xl md:text-3xl font-bold text-gray-100">SPECIALTY PERMITS</h2>
           </div>
           <div className="max-w-4xl mx-auto grid grid-cols-2 md:grid-cols-3 gap-3">
             {specialtyPermits.map((permit, idx) => (
               <div
                 key={idx}
-                className="bg-[#010101] border border-[#27272A] p-4 text-center text-sm md:text-base font-semibold text-gray-100 hover:border-[#FF9F0A] transition-colors"
+                className="bg-[#010101] border border-[#27272A] p-4 text-center text-sm md:text-base font-semibold text-gray-100 hover:border-[#FF9F0A] transition-colors flex items-center justify-center min-h-[80px]"
               >
                 {permit}
               </div>
@@ -175,19 +175,21 @@ export default function Home() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-8">
             <p className="text-xs uppercase tracking-widest text-[#FF9F0A] mb-2">Province-Wide Service · Ontario</p>
-            <h2 className="text-3xl font-bold text-gray-100">WE SERVICE ALL OF ONTARIO</h2>
+            <h2 className="text-2xl md:text-3xl font-bold text-gray-100">SUPPORTING CLIENTS ACROSS EVERY REGION OF ONTARIO</h2>
           </div>
-          <div className="max-w-3xl mx-auto text-center">
-            <p className="text-base md:text-lg text-gray-300 leading-relaxed">
+          <div className="max-w-3xl mx-auto px-2">
+            <div className="flex flex-wrap justify-center items-center gap-x-3 gap-y-2 text-base md:text-lg text-gray-300 leading-relaxed">
               {serviceCities.map((city, idx) => (
-                <span key={city}>
+                <div key={city} className="flex items-center gap-3">
                   <span className="font-semibold text-gray-100">{city}</span>
-                  {idx < serviceCities.length - 1 && <span className="text-[#FF9F0A] mx-2">·</span>}
-                </span>
+                  {idx < serviceCities.length - 1 && <span className="text-[#FF9F0A]">·</span>}
+                </div>
               ))}
-              <span className="text-[#FF9F0A] mx-2">·</span>
-              <span className="text-gray-400">+ More</span>
-            </p>
+              <div className="flex items-center gap-3">
+                <span className="text-[#FF9F0A]">·</span>
+                <span className="text-gray-400">+ More</span>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -195,7 +197,7 @@ export default function Home() {
       {/* Contact Us - 2-column with map */}
       <section id="contact-us" className="w-full py-12 md:py-24 bg-[#0A0A0B]">
         <div className="container mx-auto px-4">
-          <h2 className="mb-12 text-3xl font-bold text-center text-gray-100">CONTACT US</h2>
+          <h2 className="mb-12 text-2xl md:text-3xl font-bold text-center text-gray-100">CONTACT US</h2>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 max-w-6xl mx-auto items-center">
             {/* Left: Contact info */}
             <div className="text-gray-300 lg:pr-8">
@@ -245,14 +247,14 @@ export default function Home() {
             {/* Right: Map */}
             <div className="w-full h-80 lg:h-96 rounded-lg overflow-hidden border border-[#27272A]">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2887.0!2d-79.3868!3d43.6677!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0!2zNDPCsDQwJzAzLjciTiA3OcKwMjMnMTIuNSJX!5e0!3m2!1sen!2sca!4v1700000000000!5m2!1sen!2sca"
+                src="https://maps.google.com/maps?q=1200+Bay+Street,+Toronto,+ON&t=&z=16&ie=UTF8&iwloc=&output=embed"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
                 allowFullScreen
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-                title="FHA Solutions Inc. — 1200 Bay Street, Unit 1201, Toronto"
+                title="FHA Solutions Inc. — 1200 Bay Street, Toronto"
               />
             </div>
           </div>
