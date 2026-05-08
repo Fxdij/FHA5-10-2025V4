@@ -48,17 +48,17 @@ export function AutoSliderBanner() {
         <p className="text-lg sm:text-xl md:text-2xl text-gray-300 text-center mb-8 max-w-3xl">
           Utility design built for <span className="text-[#FF9F0A] italic">today&apos;s demands.</span>
         </p>
-        <div className="flex flex-wrap gap-3 justify-center max-w-3xl">
-          <Button onClick={() => handleScroll("about-us")} size="lg" variant="outline">
+        <div className="grid grid-cols-2 sm:flex sm:flex-wrap gap-3 justify-center w-full max-w-md sm:max-w-3xl">
+          <Button onClick={() => handleScroll("about-us")} size="lg" variant="outline" className="w-full sm:w-auto">
             ABOUT US
           </Button>
-          <Button onClick={() => handleScroll("services")} size="lg" variant="outline">
+          <Button onClick={() => handleScroll("services")} size="lg" variant="outline" className="w-full sm:w-auto">
             OUR SERVICES
           </Button>
-          <Button onClick={() => handleScroll("performance")} size="lg" variant="outline">
+          <Button onClick={() => handleScroll("performance")} size="lg" variant="outline" className="w-full sm:w-auto">
             OUR METRICS
           </Button>
-          <Button onClick={() => handleScroll("contact-us")} size="lg" variant="outline">
+          <Button onClick={() => handleScroll("contact-us")} size="lg" variant="outline" className="w-full sm:w-auto">
             CONTACT US
           </Button>
         </div>
